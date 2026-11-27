@@ -7,8 +7,8 @@ Monologue 的个人主页。纯静态页面，托管在 GitHub Pages。
 ## 页面内容
 
 - 首页：个人介绍、名片、常用技术
-- 项目：直播小助手、TeamFS、MiniOB 向量检索后端、AGENTS-Astra、never-lose-progress
-- 工具箱：语言、方向、工作习惯
+- 项目：直播小助手
+- 工具箱：浏览器扩展相关技术与实现细节
 - 关于：个人简介与小档案
 
 ## 本地预览

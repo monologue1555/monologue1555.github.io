@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Monologue — 做点有用的工具</title>
-  <meta name="description" content="Monologue 的个人主页：B站直播工具「直播小助手」作者，写 Rust 系统工具、C++ 数据库内核与 AI Agent 技能。" />
+  <meta name="description" content="Monologue 的个人主页：B站直播工具「直播小助手」作者。自动答谢、礼物截图、弹幕库和自动点赞，一个在本地运行的 Edge 扩展。" />
   <meta name="theme-color" content="#F1F2EA" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
@@ -12,9 +12,9 @@
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:site_name" content="Monologue" />
   <meta property="og:title" content="Monologue — 做点有用的工具" />
-  <meta property="og:description" content="B站直播工具「直播小助手」作者。写 Rust 系统工具、C++ 数据库内核，也写让 AI Agent 更好干活的技能。" />
+  <meta property="og:description" content="B站直播工具「直播小助手」作者。收到付费礼物自动答谢，礼物动画自动截图，常用弹幕按间隔轮换，全部在本机运行。" />
   <meta property="og:url" content="https://monologue1555.github.io/" />
-  <meta property="og:image" content="https://monologue1555.github.io/assets/og-card.png" />
+  <meta property="og:image" content="https://monologue1555.github.io/assets/og-card-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="styles.css" />
@@ -42,18 +42,17 @@
       <div class="hero-copy">
         <p class="hello"><span class="hello-dot" aria-hidden="true"></span><span>你好，我是 <strong class="hello-name">Monologue</strong></span></p>
         <h1 id="hero-title">做点<span class="mark">有用的<span class="mark-stroke" aria-hidden="true"><svg viewBox="0 0 320 26" preserveAspectRatio="none"><path d="M6 19 C 64 7, 158 6, 314 15" pathLength="1" /></svg></span></span>工具。</h1>
-        <p class="lede">B站直播工具「直播小助手」的作者。写 Rust 系统程序、C++ 数据库内核，也写让 AI Agent 更好干活的技能。</p>
+        <p class="lede">B站直播工具「直播小助手」的作者。自动答谢、礼物截图、按节奏轮换弹幕，全部在本机运行。</p>
         <div class="hero-actions">
           <a class="btn btn--ink" href="#projects">看看项目 <span aria-hidden="true">↓</span></a>
           <a class="btn" href="https://github.com/monologue1555" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
           <a class="btn btn--pink" href="https://ifdian.net/a/monologuen" target="_blank" rel="noopener">爱发电 <span aria-hidden="true">♥</span></a>
         </div>
         <ul class="hero-tags" aria-label="常用技术">
-          <li>Rust</li>
-          <li>C++</li>
-          <li>Python</li>
-          <li>TypeScript</li>
-          <li>AI Agent</li>
+          <li>JavaScript</li>
+          <li>Edge 扩展</li>
+          <li>B站直播</li>
+          <li>本地运行</li>
         </ul>
       </div>
 
@@ -72,11 +71,11 @@
           <dl class="id-card__facts">
             <div>
               <dt>正在做</dt>
-              <dd>Rust 系统工具 · Agent 技能</dd>
+              <dd>直播小助手</dd>
             </div>
             <div>
               <dt>常用</dt>
-              <dd>Rust · C++ · Python</dd>
+              <dd>JavaScript · 浏览器扩展</dd>
             </div>
           </dl>
           <a class="id-card__link" href="https://github.com/monologue1555" target="_blank" rel="noopener">
@@ -91,7 +90,7 @@
     <section class="section wrap" id="projects" aria-labelledby="projects-title">
       <div class="section-head">
         <h2 id="projects-title">做过的项目</h2>
-        <p>都来自真实场景，点进去就能看。</p>
+        <p>一个真实直播间里长出来的工具。</p>
       </div>
 
       <article class="project project--feature">
@@ -118,72 +117,6 @@
         </div>
       </article>
 
-      <div class="project-grid">
-        <article class="project project--lilac">
-          <div class="project__meta">
-            <span class="pill">系统工具</span>
-            <span class="pill">Rust</span>
-          </div>
-          <h3>TeamFS</h3>
-          <p class="project__desc">一个挂载在 Linux 上的文件系统，记录科研实验真正读了哪些文件、读的是哪一版，让实验能验证、能重来。</p>
-          <ul class="ticks">
-            <li>运行时读取归因，区分正文读取、打开与元数据访问</li>
-            <li>实验开始时固定输入为只读快照，按块写时复制</li>
-            <li>生成可验证报告，支持 verify / compare / replay</li>
-            <li>运行中保存检查点，报告原子发布，崩溃后仍一致</li>
-          </ul>
-          <div class="project__links">
-            <a class="text-link" href="https://github.com/monologue1555/TeamFS" target="_blank" rel="noopener">查看 GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project project--sky">
-          <div class="project__meta">
-            <span class="pill">课程项目</span>
-            <span class="pill">C++</span>
-          </div>
-          <h3>MiniOB 向量检索后端</h3>
-          <p class="project__desc">给 OceanBase MiniOB 加上向量数据库内核能力：VECTOR 类型、距离函数、Top-N 排序和 IVF_Flat 索引，另配 Flask 网关与 React 可视化控制台。</p>
-          <p class="code-line"><code>SELECT id FROM t_vec<br />ORDER BY distance(emb, ?) LIMIT 5;</code></p>
-          <ul class="chips" aria-label="涉及技术">
-            <li>数据库内核</li>
-            <li>向量检索</li>
-            <li>多人协作</li>
-          </ul>
-          <div class="project__links">
-            <a class="text-link" href="https://github.com/monologue1555/miniob-vector-search-backend" target="_blank" rel="noopener">查看 GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-      </div>
-
-      <div class="skill-projects">
-        <article class="project project--butter project--small">
-          <div class="project__meta">
-            <span class="pill">Codex 技能</span>
-          </div>
-          <h3>AGENTS-Astra</h3>
-          <p class="project__desc">给 GPT-6 Astra 创建、审计、改进 <code>AGENTS.md</code>，让项目的长期约定写得更清楚、更少重复。</p>
-          <div class="project__links">
-            <a class="text-link" href="https://github.com/monologue1555/AGENTS-Astra" target="_blank" rel="noopener">查看 GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project project--mint project--small">
-          <div class="project__meta">
-            <span class="pill">Codex 技能</span>
-          </div>
-          <h3>never-lose-progress</h3>
-          <p class="project__desc">让长期项目保持同步、可恢复、有据可查。中断之后，能接着上次的进度继续做。</p>
-          <div class="project__links">
-            <a class="text-link" href="https://github.com/monologue1555/never-lose-progress" target="_blank" rel="noopener">查看 GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <a class="more-card" href="https://github.com/monologue1555?tab=repositories" target="_blank" rel="noopener">
-          <span>GitHub 上还有更多</span>
-          <span class="more-card__arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
     </section>
 
     <section class="section wrap" id="skills" aria-labelledby="skills-title">
@@ -195,10 +128,6 @@
         <div class="skill-row">
           <h3>语言</h3>
           <ul class="chips">
-            <li>Rust</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>TypeScript</li>
             <li>JavaScript</li>
             <li>HTML / CSS</li>
           </ul>
@@ -206,20 +135,19 @@
         <div class="skill-row">
           <h3>方向</h3>
           <ul class="chips">
-            <li>浏览器扩展</li>
-            <li>文件系统（FUSE）</li>
-            <li>数据库内核</li>
-            <li>向量检索</li>
-            <li>AI Agent 技能</li>
+            <li>Edge 扩展</li>
+            <li>浏览器扩展 API</li>
+            <li>弹幕 WebSocket</li>
+            <li>B站直播工具</li>
+            <li>本地运行</li>
           </ul>
         </div>
         <div class="skill-row">
-          <h3>习惯</h3>
+          <h3>细节</h3>
           <ul class="chips">
-            <li>可复现</li>
-            <li>本地优先</li>
-            <li>CI 验证</li>
-            <li>文档写清楚</li>
+            <li>自动重连</li>
+            <li>连击合并</li>
+            <li>发送频率限制</li>
           </ul>
         </div>
       </div>
@@ -229,7 +157,7 @@
       <div class="about__text">
         <h2 id="about-title">关于我</h2>
         <p class="about__statement">工具应该少打扰人，多替人做事。</p>
-        <p>我是 Monologue。做过「直播小助手」——一个帮 B 站主播自动答谢、礼物截图、轮换弹幕的 Edge 扩展；也写系统工具和 AI Agent 技能，比如让科研实验可重放的 TeamFS，和帮项目把约定写清楚的 AGENTS-Astra。</p>
+        <p>我是 Monologue。做过「直播小助手」——一个帮 B 站主播自动答谢、礼物截图、轮换弹幕的 Edge 扩展。</p>
         <p>我喜欢从真实场景出发：先看哪里重复、哪里容易出错，再把它做成顺手的小工具。</p>
       </div>
 
@@ -247,10 +175,6 @@
           <div>
             <dt>代表作</dt>
             <dd>直播小助手</dd>
-          </div>
-          <div>
-            <dt>公开项目</dt>
-            <dd>TeamFS · MiniOB · AGENTS-Astra · never-lose-progress</dd>
           </div>
           <div>
             <dt>支持</dt>
